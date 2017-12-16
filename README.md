@@ -1,3 +1,5 @@
+![Build status](https://travis-ci.org/VishalAkhouri/angular-animation-examples.svg?branch=master)
+
 # AngularAnimationExamples
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.3.
