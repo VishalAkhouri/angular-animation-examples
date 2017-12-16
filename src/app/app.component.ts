@@ -20,7 +20,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
   ]
 })
 export class AppComponent {
-  title = 'app';
+  title = 'auto deploy app';
   state = 'normal';
 
   animate() {
