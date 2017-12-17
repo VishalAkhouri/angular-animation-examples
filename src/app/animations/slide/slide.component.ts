@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
-  selector: 'app-slide-out',
-  templateUrl: './slide-out.component.html',
-  styleUrls: ['./slide-out.component.css'],
+  selector: 'app-slide',
+  templateUrl: './slide.component.html',
+  styleUrls: ['./slide.component.css'],
   animations: [
     trigger('divState', [
       state('normal', style({
@@ -19,7 +19,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
     ])
   ]
 })
-export class SlideOutComponent implements OnInit {
+export class SlideComponent implements OnInit {
   state = 'normal';
   constructor() { }
 

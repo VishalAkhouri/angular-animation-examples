@@ -3,18 +3,16 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { SlideOutComponent } from './animations/slide-out/slide-out.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ExamplesModule} from "./examples/examples.module";
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SlideOutComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    ExamplesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
