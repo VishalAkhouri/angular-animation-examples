@@ -4,12 +4,14 @@
       <header>
         <h1>Animate: Slide</h1>
       </header>
-      <div>
-        <button (click)="animate()">Animate</button>
+
+      <div class="section-container" (click)="handleShowPanel()">
+        <span>Press here to options</span>
+        <i class="fa fa-caret-down"></i>
       </div>
-      <i class="fas fa-camera-retro"></i>
-      <i class="fab fa-angular"></i>
-      <div class="box" [@divState]="state"></div>
+      <div class="section-panel" [@slideState] *ngIf="showPanel">
+        This section is the panel
+      </div>
     </section>
   </div>
 </div>

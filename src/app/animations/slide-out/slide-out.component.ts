@@ -4,7 +4,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 @Component({
   selector: 'app-slide-out',
   templateUrl: './slide-out.component.html',
-  styleUrls: ['./slide-out.component.css'],
+  styleUrls: ['./slide-out.component.scss'],
   animations: [
     trigger('divState', [
       state('normal', style({

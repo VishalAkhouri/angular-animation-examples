@@ -1,0 +1,20 @@
+section {
+  width: 300px;
+  .section-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #dcdcdc;
+    height: 20px;
+    //width: 300px;
+
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  .section-panel {
+    background-color: #dcdccc;
+    height: 50px;
+    padding: 20px;
+  }
+}
+

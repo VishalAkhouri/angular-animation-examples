@@ -4,29 +4,43 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 @Component({
   selector: 'app-slide',
   templateUrl: './slide.component.html',
-  styleUrls: ['./slide.component.css'],
+  styleUrls: ['./slide.component.scss'],
   animations: [
-    trigger('divState', [
-      state('normal', style({
-        'background-color': 'red',
-        transform: 'translateX(0)'
+    trigger('slideState', [
+      state('add', style({
+        height: 50,
+        opacity: 1
       })),
-      state('highlighted', style({
-        'background-color': 'blue',
-        transform: 'translateX(100px)'
-      })),
-      transition('normal => highlighted', animate('1000ms ease-in')),
+      transition('void => *', [
+        style({
+          height: 0,
+          opacity: 0
+        }),
+        animate(100)
+      ]),
+      transition('* => void', [
+        animate(100, style({
+          height: 0,
+          opacity: 0
+        }))
+      ])
     ])
   ]
 })
 export class SlideComponent implements OnInit {
   state = 'normal';
+  showPanel: boolean;
   constructor() { }
 
   ngOnInit() {
+    this.showPanel = false;
   }
 
   animate() {
     this.state === 'normal' ? this.state = 'highlighted' : this.state = 'normal';
+  }
+
+  handleShowPanel() {
+    this.showPanel = !this.showPanel;
   }
 }
